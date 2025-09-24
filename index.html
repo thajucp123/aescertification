@@ -22,16 +22,38 @@
         <div class="logo">
             <img src="https://www.aes-inspection.com/images/AES-logos.png" alt="AES Logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Project Gallery</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+        <nav> 
+  <ul>
+    <li><a href="https://www.aes-inspection.com/index.html">Home</a></li>
+    <li><a href="https://www.aes-inspection.com/about.html">About Us</a></li>
+    
+    <li class="dropdown">
+      <a href="#" class="active">Services ￬</a>
+      <ul class="dropdown-content">
+        <li><a href="#">Inspection & Training</a></li>
+        <li><a href="#">Audit & Evaluation</a></li>
+        <li class="dropdown-sub">
+          <a href="#" class="active">Certification ￫</a>
+          <ul class="sub-dropdown">
+            <li><a href="#">ISO Certification</a></li>
+            <li><a href="#">Compliance</a></li>
+            <li><a href="#">Cyber Security</a></li>
+            <li><a href="#">Product Certification</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Prequalification Support</a></li>
+        <li><a href="#">Engineering Consultancy</a></li>
+        <li><a href="#">Property Inspection</a></li>
+        <li><a href="#">Vehicle Inspection</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="https://www.aes-inspection.com/projects-gallery.html">Project Gallery</a></li>
+    <li><a href="https://www.aes-inspection.com/career.html">Career</a></li>
+    <li><a href="https://www.aes-inspection.com/contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
     </header>
 
     <section class="hero-section">
@@ -40,6 +62,7 @@
 
     <main class="container">
         <aside class="sidebar">
+            <h1 style="padding: 1rem; padding-bottom: 0; margin-bottom: 0;">All Certifications</h1>
             <div class="sidebar-section">
                 <h3 class="main-menu-item" data-target="iso-certifications-main">ISO Certifications</h3>
                 <ul>
@@ -135,25 +158,30 @@
                         <h3>IATF</h3>
                         <p>IATF stands for International Automotive Task Force, IATF has arranged to respond to the changed conditions as a result of the coronavirus pandemic...</p>
                     </div>
-                    <div class="service-item" id="iso-21001">
-                        <h3>ISO 21001:2018 (EOMCS)</h3>
-                        <p>...</p>
-                    </div>
-                    <div class="service-item" id="iso-50001">
-                        <h3>ISO 50001:2018 (EnMS)</h3>
-                        <p>...</p>
-                    </div>
-                    <div class="service-item" id="iso-55001">
-                        <h3>ISO 55001:2014 (AMS)</h3>
-                        <p>...</p>
-                    </div>
-                    <div class="service-item" id="iso-26001">
-                        <h3>ISO 26001:2010</h3>
-                        <p>...</p>
-                    </div>
-                    <div class="service-item" id="iso-37001">
-                        <h3>ISO 37001:2010</h3>
-                        <p>...</p>
+                    <div class="other-services-section">
+                        <h2><span class="highlight">Other</span> Services</h2>
+                        <div class="card-container">
+                            <div class="card">
+                                <h4>ISO 21001:2018 (EOMCS)</h4>
+                                <p>Educational Organization Management System.</p>
+                            </div>
+                            <div class="card">
+                                <h4>ISO 50001:2018 (EnMS)</h4>
+                                <p>Energy Management System.</p>
+                            </div>
+                            <div class="card">
+                                <h4>ISO 55001:2014 (AMS)</h4>
+                                <p>Asset Management System.</p>
+                            </div>
+                            <div class="card">
+                                <h4>ISO 26001:2010</h4>
+                                <p>Guidance on Social Responsibility.</p>
+                            </div>
+                            <div class="card">
+                                <h4>ISO 37001:2010</h4>
+                                <p>Anti-Bribery Management System.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -358,7 +386,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright Adhuni | All Rights Reserved. Powered By stellentcg</p>
+            <p>&copy Copyright Adhuni | All Rights Reserved. Developed By <a href="https://www.thajucp.in/" target="_blank" rel="noopener noreferrer" style="color: #028f7e; text-decoration: underline; font-weight: bold;">Thaju CP</a></p>
         </div>
     </footer>
     <script src="script.js"></script>
