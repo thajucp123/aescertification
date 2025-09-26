@@ -213,6 +213,14 @@ nav ul li a.active {
     height: fit-content;
 }
 
+.main-menu-item {
+    cursor: pointer;
+}
+
+.main-menu-item:hover {
+    color: #00796b;
+}
+
 .sidebar-section {
     padding: 20px;
     border-bottom: 1px solid #eee;
@@ -276,50 +284,7 @@ nav ul li a.active {
     color: #0573AC;
 }
 
-.service-list {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
 
-.service-item {
-    border-left: 4px solid #0573AC;
-    padding-left: 20px;
-}
-
-.service-item h3 {
-    color: #013353;
-    font-size: 1.5em;
-    font-weight: 700;
-    margin-top: 0;
-}
-
-.service-item p {
-    margin-bottom: 15px;
-}
-
-.other-services-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
-}
-
-.other-services-section h3 {
-    color: #013353;
-    font-size: 1.2em;
-    margin-top: 0;
-}
-
-.other-services-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px 30px;
-}
 
 /* Horizontal Rule for separation */
 hr {
@@ -333,18 +298,20 @@ hr {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #00796b;
+    border: 3px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     padding: 20px;
     width: 200px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -352,15 +319,44 @@ hr {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 80%
+    );
+    transform: skewX(-20deg);
+}
+
+.card:hover::before {
+    animation: shine 1s infinite linear;
+}
+
 .card h4 {
-    color: #013353;
+    color: #fff;
     font-size: 1.1em;
     margin-top: 0;
 }
 
 .card p {
     font-size: 0.9em;
-    color: #555;
+    color: #e0f2f1;
 }
 
 /* Footer Section */
